@@ -26,5 +26,7 @@ jobs:
         doxygen Doxyfile
     - name: Deploy 🚀
       uses: JamesIves/github-pages-deploy-action@v4
+      env:
+        GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       with:
         folder: target/doxygen/html
