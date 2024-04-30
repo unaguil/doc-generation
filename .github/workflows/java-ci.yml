@@ -24,3 +24,9 @@ jobs:
       run: |
         cd src/main/resources
         doxygen Doxyfile
+    - name: Publish on Github Pages
+      uses: crazy-max/ghaction-github-pages@v2.3.0
+      with:
+        build_dir: target/doxygen/html
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
