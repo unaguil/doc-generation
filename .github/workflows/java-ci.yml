@@ -19,7 +19,7 @@ jobs:
       run: mvn -B test
 
     - name: Install doxygen dependencies
-      run: apt-get install -y doxygen
+      run: sudo apt-get install -y doxygen
     - name: Generate documentation with Doxygen
       run: |
         cd /src/main/resources
