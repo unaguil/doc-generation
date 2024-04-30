@@ -7,6 +7,9 @@ jobs:
   build:
     runs-on: ubuntu-latest
 
+    permissions:
+      contents: write
+
     steps:
     - uses: actions/checkout@v4
     - name: Set up JDK 21
@@ -26,7 +29,5 @@ jobs:
         doxygen Doxyfile
     - name: Deploy 🚀
       uses: JamesIves/github-pages-deploy-action@v4
-      env:
-        GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       with:
         folder: target/doxygen/html
