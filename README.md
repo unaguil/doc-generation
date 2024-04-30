@@ -8,3 +8,5 @@ Maven site generation can be launched with
     mvn site
 
 After process is finished go to **target/site** folder and open the main **index.hmtl** file to see the reports.
+
+See generated documentation here https://unaguil.github.io/doc-generation/
